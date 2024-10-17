@@ -50,17 +50,17 @@ postgresql:
         username: immich
         database: immich
         password: immich
-  primary:
-    persistence:
-      enabled: true
-      existingClaim: immich-postgres-pvc
-      storageClass: longhorn
-    initdb:
-      scripts:
-        create-extensions.sql: |
-          CREATE EXTENSION cube;
-          CREATE EXTENSION earthdistance;
-          CREATE EXTENSION vectors;
+  # primary:
+  #   persistence:
+  #     enabled: true
+  #     existingClaim: immich-postgres-pvc
+  #     storageClass: longhorn
+  #   initdb:
+  #     scripts:
+  #       create-extensions.sql: |
+  #         CREATE EXTENSION cube;
+  #         CREATE EXTENSION earthdistance;
+  #         CREATE EXTENSION vectors;
   volumePermissions:
     enabled: true
 
